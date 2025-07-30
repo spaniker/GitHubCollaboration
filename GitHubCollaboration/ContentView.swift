@@ -11,10 +11,17 @@ struct ContentView: View {
     @State private var showMenu = false
     
     var body: some View {
+        
+        Image("logo")
+            .resizable()
+            .frame(width: 105, height: 100)
+            .padding(.trailing, 280)
+            Spacer()
+        
         NavigationView {
             ZStack(alignment: .topTrailing) {
                 
-                    
+    
                     
                     VStack(alignment: .trailing, spacing: 10) {
                         // Profile button
