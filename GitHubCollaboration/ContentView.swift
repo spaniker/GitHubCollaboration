@@ -25,7 +25,7 @@ struct ContentView: View {
                         }) {
                             Image(systemName: "person.crop.circle")
                                 .resizable()
-                                .frame(width: 30, height: 30)
+                                .frame(width: 35, height: 35)
                                 .padding()
                                 }
                         
@@ -46,7 +46,7 @@ struct ContentView: View {
                 }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
                             .padding(.top,10)
-                            .padding(.trailing, 30)                .navigationBarHidden(true)
+                            .padding(.trailing, 40)                .navigationBarHidden(true)
             }
         }
     }
