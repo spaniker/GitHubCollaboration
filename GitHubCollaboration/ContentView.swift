@@ -16,7 +16,7 @@ struct ContentView: View {
                 
                     
                     
-                    VStack(alignment: .trailing, spacing: 10) {
+                    VStack(alignment: .trailing, spacing: 20) {
                         // Profile button
                         Button(action: {
                             withAnimation {
@@ -27,7 +27,7 @@ struct ContentView: View {
                                 .resizable()
                                 .frame(width: 30, height: 30)
                                 .padding()
-                        }
+                                }
                         
                         // Dropdown Menu
                         if showMenu {
@@ -43,10 +43,10 @@ struct ContentView: View {
                             .padding(.trailing, 10)
                         }
                     }
-                    .padding(.top, 50)
-                    .padding(.trailing, 10)
                 }
-                .navigationBarHidden(true)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+                            .padding(.top,10)
+                            .padding(.trailing, 30)                .navigationBarHidden(true)
             }
         }
     }
