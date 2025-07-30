@@ -15,14 +15,10 @@ struct ContentView: View {
         Image("logo")
             .resizable()
             .frame(width: 105, height: 100)
-            .padding(.trailing, 280)
-            Spacer()
-        
-        NavigationView {
+            .padding(.trailing, 200)
+        Spacer()
+         NavigationView {
             ZStack(alignment: .topTrailing) {
-                
-    
-                    
                     VStack(alignment: .trailing, spacing: 20) {
                         // Profile button
                         Button(action: {
@@ -32,7 +28,7 @@ struct ContentView: View {
                         }) {
                             Image(systemName: "person.crop.circle")
                                 .resizable()
-                                .frame(width: 35, height: 35)
+                                .frame(width: 40, height: 40)
                                 .padding()
                                 }
                         
@@ -52,7 +48,7 @@ struct ContentView: View {
                     }
                 }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
-                            .padding(.top,10)
+                            .padding(.top, 0)
                             .padding(.trailing, 40)                .navigationBarHidden(true)
             }
         }
