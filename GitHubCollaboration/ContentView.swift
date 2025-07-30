@@ -8,19 +8,74 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showMenu = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-            Text("Change 1")
-            Text("Change 2")
+        NavigationView {
+            ZStack(alignment: .topTrailing) {
+                
+                    
+                    
+                    VStack(alignment: .trailing, spacing: 10) {
+                        // Profile button
+                        Button(action: {
+                            withAnimation {
+                                showMenu.toggle()
+                            }
+                        }) {
+                            Image(systemName: "person.crop.circle")
+                                .resizable()
+                                .frame(width: 30, height: 30)
+                                .padding()
+                        }
+                        
+                        // Dropdown Menu
+                        if showMenu {
+                            VStack(alignment:.trailing, spacing: 10) {
+                                NavigationLink("Profile", destination: ProfileView())
+                                NavigationLink("Saved", destination: SavedView())
+                                NavigationLink("Completed", destination: CompletedView())
+                                NavigationLink("Explore", destination: ExploreView())
+                            }
+                            .padding()
+                            .cornerRadius(10)
+                            .shadow(radius: 5)
+                            .padding(.trailing, 10)
+                        }
+                    }
+                    .padding(.top, 50)
+                    .padding(.trailing, 10)
+                }
+                .navigationBarHidden(true)
+            }
         }
-        .padding()
     }
-}
+    struct ProfileView: View {
+        var body: some View {
+            Text("Profile Page")
+                .font(.largeTitle)
+        }
+    }
+    
+    struct SavedView: View {
+        var body: some View {
+            Text("Saved Page")
+                .font(.largeTitle)
+        }
+    }
+    
+    struct CompletedView: View {
+        var body: some View {
+            Text("Completed Page")
+                .font(.largeTitle)
+        }
+    }
+    struct ExploreView: View {
+        var body: some View {
+            Text("Explore Page")
+        }
+    }
+    #Preview {
+        ContentView()
+    }
 
-#Preview {
-    ContentView()
-}
