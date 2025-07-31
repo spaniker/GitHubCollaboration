@@ -14,12 +14,13 @@ struct ContentView: View {
    NavigationView {
    ZStack(alignment: .topTrailing) {
     VStack(alignment: .trailing, spacing: 20) {
+        
       HStack{
         //moved logo inside the HStack
         Image("logo")
           .resizable()
           .frame(width: 105, height: 100)
-          .padding(.trailing, 130)//edit spacing here
+          .padding(.trailing, 200)//edit spacing here
         //Spacer()
         // Profile button
         Button(action: {
@@ -35,6 +36,13 @@ struct ContentView: View {
         }
         }
         //end of button
+        NavigationLink(destination: jellyfishPattern()){
+            Image("jellyfish")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 375, height: 350)
+                .cornerRadius(45)
+        }
         Spacer()//push logo and button to the top of the page
       }//end of HStack
      // Dropdown Menu
@@ -51,19 +59,24 @@ struct ContentView: View {
        .padding(.trailing, 10)
      .padding()
      }//end of show Menu
-    } //end of VStack
+    } //end of ZStack
    /*.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
        .padding(.top, 0)
        .padding(.trailing, 40)    .navigationBarHidden(true)*/
-   } //end of ZStack
+   } //end of NavigationStack
   } //end of body
 } //end of content view struct
- struct ProfileView: View {
-  var body: some View {
-   Text("Profile Page")
-    .font(.largeTitle)
-  }
- }
+struct ProfileView: View {
+    var body: some View {
+        ProfilePageView() // This loads your profile form
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
  struct SavedView: View {
   var body: some View {
    Text("Saved Page")
