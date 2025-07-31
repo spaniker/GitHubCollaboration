@@ -58,12 +58,17 @@ struct ContentView: View {
    } //end of ZStack
   } //end of body
 } //end of content view struct
- struct ProfileView: View {
-  var body: some View {
-   Text("Profile Page")
-    .font(.largeTitle)
-  }
- }
+struct ProfileView: View {
+    var body: some View {
+        ProfilePageView() // This loads your profile form
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
  struct SavedView: View {
   var body: some View {
    Text("Saved Page")
