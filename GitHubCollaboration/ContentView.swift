@@ -34,12 +34,6 @@ struct ContentView: View {
             .padding()        }
         }
         //end of button
-        Spacer()//push logo and button to the top of the page
-      }//end of HStack
-     // Dropdown Menu
-     if showMenu {
-       VStack(alignment:.leading, spacing: 10) {
-         NavigationLink("Profile", destination: ProfileView())
          NavigationLink("Saved", destination: SavedView())
          NavigationLink("Completed", destination: CompletedView())
          NavigationLink("Explore", destination: ExploreView())
@@ -50,17 +44,17 @@ struct ContentView: View {
        .padding(.trailing, 10)
      .padding()
      }//end of show Menu
-    } //end of VStack
+    } //end of ZStack
    /*.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
        .padding(.top, 0)
        .padding(.trailing, 40)    .navigationBarHidden(true)*/
-   } //end of ZStack
+   } //end of NavigationStack
   } //end of body
-} //end of content view struct
+    } //end of VStack
 struct ProfileView: View {
     var body: some View {
         ProfilePageView() // This loads your profile form
-    }
+   } //end of NavigationStack
 }
 
 struct ContentView_Previews: PreviewProvider {
