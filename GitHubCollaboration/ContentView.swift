@@ -19,7 +19,7 @@ struct ContentView: View {
         Image("logo")
           .resizable()
           .frame(width: 105, height: 100)
-          .padding(.trailing, 130)//edit spacing here
+          .padding(.trailing, 168)//edit spacing here
         //Spacer()
         // Profile button
         Button(action: {
@@ -30,9 +30,8 @@ struct ContentView: View {
         {
           Image(systemName: "person.crop.circle")
             .resizable()
-            .frame(width: 40, height: 40)
-            .padding()
-        }
+            .frame(width: 44, height: 45)
+            .padding()        }
         }
         //end of button
         Spacer()//push logo and button to the top of the page
