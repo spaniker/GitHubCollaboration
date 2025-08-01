@@ -44,7 +44,7 @@ struct ContentView: View {
          NavigationLink("Profile", destination: ProfileView())
          NavigationLink("Saved", destination: SavedView())
          NavigationLink("Completed", destination: CompletedView())
-         NavigationLink("Explore", destination: ExploreView())
+         NavigationLink("Explore", destination: ExplorePage())
        }
        .padding()
        .cornerRadius(10)
