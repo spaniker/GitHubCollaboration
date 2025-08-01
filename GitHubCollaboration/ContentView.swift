@@ -36,13 +36,6 @@ struct ContentView: View {
         }
         }
         //end of button
-        NavigationLink(destination: jellyfishPattern()){
-            Image("jellyfish")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 375, height: 350)
-                .cornerRadius(45)
-        }
         Spacer()//push logo and button to the top of the page
       }//end of HStack
      // Dropdown Menu

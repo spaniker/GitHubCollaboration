@@ -18,6 +18,9 @@ struct ExplorePage: View {
                 NavigationLink(destination: stuffedAnimalPatterns()){
                     Text("Stuffed Animal Patterns")
                 }
+                NavigationLink(destination: stuffedAnimalPatterns()){
+                    Text("Bag Patterns")
+                }
                 Spacer()
             }
         }

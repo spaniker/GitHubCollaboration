@@ -9,8 +9,6 @@ import SwiftUI
 
 struct jellyfishPattern: View {
     var body: some View {
-annika-dev
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
 
         ScrollView {
             VStack{
@@ -26,6 +24,7 @@ annika-dev
                     VStack{
                         
                         Text("Materials:")
+                            .font(.title)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .bold()
                         
@@ -78,7 +77,6 @@ annika-dev
                 
             }
         }
- main
     }
 }
 
