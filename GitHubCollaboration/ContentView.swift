@@ -34,6 +34,13 @@ struct ContentView: View {
             .padding()        }
         }
         //end of button
+
+        Spacer()//push logo and button to the top of the page
+      }//end of HStack
+     // Dropdown Menu
+     if showMenu {
+       VStack(alignment:.leading, spacing: 10) {
+         NavigationLink("Profile", destination: ProfileView())
          NavigationLink("Saved", destination: SavedView())
          NavigationLink("Completed", destination: CompletedView())
          NavigationLink("Explore", destination: ExploreView())
