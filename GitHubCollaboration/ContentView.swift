@@ -14,13 +14,12 @@ struct ContentView: View {
    NavigationView {
    ZStack(alignment: .topTrailing) {
     VStack(alignment: .trailing, spacing: 20) {
-        
       HStack{
         //moved logo inside the HStack
         Image("logo")
           .resizable()
           .frame(width: 105, height: 100)
-          .padding(.trailing, 200)//edit spacing here
+          .padding(.trailing, 168)//edit spacing here
         //Spacer()
         // Profile button
         Button(action: {
@@ -31,11 +30,11 @@ struct ContentView: View {
         {
           Image(systemName: "person.crop.circle")
             .resizable()
-            .frame(width: 40, height: 40)
-            .padding()
-        }
+            .frame(width: 44, height: 45)
+            .padding()        }
         }
         //end of button
+
         Spacer()//push logo and button to the top of the page
       }//end of HStack
      // Dropdown Menu
@@ -58,11 +57,11 @@ struct ContentView: View {
        .padding(.trailing, 40)    .navigationBarHidden(true)*/
    } //end of NavigationStack
   } //end of body
-} //end of content view struct
+    } //end of VStack
 struct ProfileView: View {
     var body: some View {
         ProfilePageView() // This loads your profile form
-    }
+   } //end of NavigationStack
 }
 
 struct ContentView_Previews: PreviewProvider {
