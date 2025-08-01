@@ -64,13 +64,9 @@ struct cowPattern: View {
                 Round 2: 1 sc in first st, 3 sc in next st, 1 sc in next 2 sts, 3 sc in net st, 1 sc in last st (10 sc)
 
                 Finish off and cut yarn leaving long tail for sewing
-
                 Embroider 2 small lines on the nose for nostrils
-
                 Sew the nose to the head just below the eyes
-
                 Ears
-
                 Make 2, one with white yarn, one with black yarn
 
                 Round 1: in mr, ch 1, 6 sc (6 sc)
@@ -78,22 +74,17 @@ struct cowPattern: View {
                 Round 3: 1 sc in each st (9 sc)
 
                 Finish off and cut yarn, leaving long tail for sewing 
-
                 Sew ears to the sides of the head 
-
                 Horns
-
                 Make 2 with tan yarn
 
                 Round 1: in mr, ch 1, 4 sc (4 sc)
                 Round 2: 1 sc in each st (4 sc)
 
                 Finish off and cut yarn, leaving long tail for sewing 
-
                 Sew horns to the top of the head
 
-                Legs
-
+                Legs:
                 Make 4 with beginning with tan yarn and changing to white where directed, beginning with magic ring
 
                 Round 1: in mr, ch 1, 8 sc (8 sc)
@@ -107,6 +98,9 @@ struct cowPattern: View {
 
                 Sew the 2 of the legs/arms to the side of the body between the body and head, sew the other 2 to the bottom side of the body in a sitting position
                 """)
+                Text("Credit to https://www.5littlemonsters.com/2023/04/cow-mini-amigurumi-cal-day-3.html")
+                    .font(.caption)
+                
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
             Spacer()
