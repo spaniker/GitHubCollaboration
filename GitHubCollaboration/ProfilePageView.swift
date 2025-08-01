@@ -36,10 +36,12 @@ struct ProfilePageView: View {
     }
 
     func saveProfile() {
-        print("Name: \(name)")
-        print("Email: \(email)")
-        print("Birthday: \(birthday)")
-    }
+            UserDefaults.standard.set(name, forKey: "profile_name")
+            UserDefaults.standard.set(email, forKey: "profile_email")
+            UserDefaults.standard.set(birthday.timeIntervalSince1970, forKey: "profile_birthday")
+            print("Profile saved!")
+        }
+
 }
 
 struct ProfilePageView_Previews: PreviewProvider {
